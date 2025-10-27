@@ -7,8 +7,6 @@ const generateToken=(id)=>{
             expiresIn:'30d'
         })
 }
-
-
 export const registerUser=async (req,res)=>{
     const {name,email,password}=req.body;
 
@@ -52,7 +50,6 @@ export const getUser=async (req,res)=>{
     }
 }
 
-//to publish image
 export const getPublishedImages=async (req,res)=>{
     try{
         const publishedImageMessages=await Chat.aggregate([
@@ -61,8 +58,8 @@ export const getPublishedImages=async (req,res)=>{
             },
             {
                 $match:{
-                    "message.isImage":true,
-                    "message.isPublished":true
+                    "messages.isImage":true,
+                    "messages.isPublished":true
                 }
             },
             {
