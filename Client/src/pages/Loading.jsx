@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppContext } from '../context/AppContext';
 
-const Loding = () => {
+const Loading = () => {
   const navigate=useNavigate();
   const {fetchUser}=useAppContext()
   useEffect(()=>{
@@ -20,4 +20,4 @@ const Loding = () => {
   )
 }
 
-export default Loding
+export default Loading

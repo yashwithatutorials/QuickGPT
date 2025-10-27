@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { dummyPublishedImages } from '../assets/assets'
-import Loding from './Loding'
+import Loding from './Loading'
 import { useAppContext } from '../context/AppContext'
 import toast from 'react-hot-toast'
 

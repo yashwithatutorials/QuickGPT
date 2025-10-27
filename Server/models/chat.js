@@ -9,9 +9,9 @@ const chatSchema=new mongoose.Schema({
             isPublished:{type:Boolean,default:false},
             role:{type:String,required:true},
             content:{type:String,required:true},
-            timeStamp:{type:Number,required:true},
+            timestamp:{type:Number,required:true},
         }
     ]
 },{timestamps:true})
-const Chat=mongoose.model('Chat',chatSchema);
+const Chat=mongoose.models.Chat||mongoose.model('Chat',chatSchema);
 export default Chat;
